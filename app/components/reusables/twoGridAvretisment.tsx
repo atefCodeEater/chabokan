@@ -12,10 +12,10 @@ export default function TwoGridAvretisment({
   outCss: string;
 }) {
   return (
-    <div className={` h-[500px]  ${outCss}`}>
-      <div className="w-[700px] max-h-96 ">{content}</div>
-      <div className="w-[500px] p-1 max-h-96 flex justify-end items-center">
-        <Image alt="#" width={400} height={400} src={imageUrl} />
+    <div className={`flex justify-center items-center max-h-[700px] ${outCss}`}>
+      <div className="w-2/3   h-full">{content}</div>
+      <div className="w-1/3   h-full  ">
+        <Image alt="#" width={700} height={700} src={imageUrl} />
       </div>
     </div>
   );

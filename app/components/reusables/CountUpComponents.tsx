@@ -18,7 +18,7 @@ export default function countUpComponents({
     >
       <div className="w-auto font-thin text-slate-400 h-12 flex justify-center items-center text-3xl">
         <BiPlus />
-        <CountUp end={target} />
+        <CountUp enableScrollSpy end={target} />
       </div>
       <p className="w-full text-center font-B_Nazanin  text-slate-400 text-xl h-9">
         {title}

@@ -14,7 +14,10 @@ export default function headerComp() {
       className="bg-slate-800 w-full flex 
      justify-center items-center text-white text-lg space-x-8 h-20 font-B_Nazanin"
     >
-      <button className="bg-orange-600 mr-12 w-44 h-9 flex justify-center items-center rounded-md  ">
+      <button
+        className="bg-orange-600 mr-12 w-44 h-9 flex justify-center items-center 
+      rounded-md  "
+      >
         ورود | ثبت نام
       </button>
       <CustomDropDown buttonClass="" title="ارتباط با ما" />

@@ -16,7 +16,7 @@ export default function AccordionComponents({ contents }: AcoordionInterface) {
 
   const renderAccordion = contents.map((item, i) => {
     return (
-      <div key={item.title} className="">
+      <div key={item.title} className="h-auto ">
         <section className={`text-right font-B_Nazanin  `}>
           <h1
             className={`${
@@ -24,7 +24,7 @@ export default function AccordionComponents({ contents }: AcoordionInterface) {
                 ? "text-orange-500"
                 : "text-white border-b-0  "
             }  flex border-1  border-slate-800  py-4 h-16 px-4 justify-end
-                 cursor-pointer transition-all delay-200 items-center space-x-2`}
+                 cursor-pointer  items-center space-x-2`}
             onClick={() => {
               setIndicator((n) => {
                 if (n === i + 1) return 0;
@@ -39,12 +39,12 @@ export default function AccordionComponents({ contents }: AcoordionInterface) {
               "
               >
                 <FaPlus
-                  className={`absolute  delay-200 transition-opacity  ${
+                  className={`absolute    ${
                     indicator === i + 1 ? "opacity-100" : "opacity-0"
                   }`}
                 />
                 <FaMinus
-                  className={`absolute delay-200 transition-opacity  ${
+                  className={`absolute   ${
                     indicator === i + 1 ? "opacity-0" : "opacity-100"
                   }`}
                 />
@@ -54,20 +54,22 @@ export default function AccordionComponents({ contents }: AcoordionInterface) {
           <div
             id={indicator.toString()}
             className={`${
-              indicator === i + 1 ? `max-h-96 py-4` : "max-h-0  "
-            } border-1 border-t-0 border-b-0 tracking-wider font-B_Nazanin  overflow-hidden text-base font-normal
-           border-slate-800 text-white  px-4 delay-150 transition-all  `}
+              indicator === i + 1
+                ? `max-h-[500px] delay-150 ease-in  duration-700`
+                : "max-h-0  py-0 ease-out duration-500"
+            } border-1 border-t-0 border-b-0 tracking-wider font-B_Nazanin 
+             overflow-hidden text-base font-normal
+           border-slate-800 text-white   px-4  `}
           >
+            <br />
             {item.description}
+            <br />
+            <br />
           </div>
         </section>
       </div>
     );
   });
 
-  const element = document.getElementById(indicator.toString());
-
-  return (
-    <div className="h-full border-b-1 border-slate-800">{renderAccordion}</div>
-  );
+  return <div className=" border-b-1 border-slate-800 ">{renderAccordion}</div>;
 }

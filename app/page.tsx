@@ -6,10 +6,17 @@ import Pricing_1 from "@/app/components/reusables/pricingPage/pricing_1";
 import Pricing_2 from "@/app/components/reusables/pricingPage/pricing_2";
 import { BsDatabaseFillCheck } from "react-icons/bs";
 import Items_description from "@/app/components/reusables/pricingPage/items&description";
+import { RenderImages_GridRow } from "@/app/components/reusables/pricingPage/companyAlpha";
+
 import Accordion_Components from "@/app/components/reusables/Accordion";
 import { FaLaptopCode } from "react-icons/fa";
 import { LuNetwork } from "react-icons/lu";
 import CountUpComponents from "@/app/components/reusables/CountUpComponents";
+import SliderComponents from "./hooks/SliderHook";
+import { SwiperSlide } from "swiper/react";
+
+import Image from "next/image";
+import { Button, Skeleton } from "@heroui/react";
 
 export default function Home() {
   const contents = [
@@ -48,18 +55,18 @@ export default function Home() {
     },
   ];
   return (
-    <div className="flex  justify-center  ">
-      <div className="fixed w-full flex-wrap">
+    <div className="flex w-full h-auto justify-center  ">
+      <div className="fixed w-full">
         <Headeromponent />
       </div>
       <div className="bg-slate-950  w-full h-full flex flex-wrap space-y-12 justify-center">
         <TwoGridAvretisment
-          outCss="flex w-[1200px] h-1/2 mt-24 justify-center items-center"
+          outCss=" w-[1200px] h-1/2 mt-24 "
           content={<Pricing_1 />}
           imageUrl={"/images/Pricing-plans-hosting.webp"}
         />
         <TwoGridAvretisment
-          outCss="flex flex-row-reverse w-[1200px] h-1/2 mt-24 justify-center items-center"
+          outCss=" flex-row-reverse w-[1200px] h-1/2 mt-24 "
           content={<Pricing_2 />}
           imageUrl={"/images/cloud-hosting-price.webp"}
         />
@@ -147,7 +154,7 @@ export default function Home() {
           سوالات متداول{" "}
         </h1>
         <TwoGridAvretisment
-          outCss="flex w-[1200px]  mt-24 justify-center items-center"
+          outCss="flex w-[1200px]  mt-24  "
           content={<Accordion_Components contents={contents} />}
           imageUrl={"/images/Questions-for-cloud-hosting.webp"}
         />
@@ -188,6 +195,134 @@ export default function Home() {
             title=" استقرار موفق"
           />
         </div>
+        <SliderComponents slidesPerView={2}>
+          <SwiperSlide className="text-white h-full border-1 border-slate-900 p-4">
+            <div className="flex flex-wrap w-full space-y-3 h-full justify-center">
+              <Image
+                className="rounded-md "
+                width={130}
+                height={130}
+                alt="#"
+                src={"/images/12317.jpg"}
+              />
+              <div className="text-center w-full">
+                خوبیه تو ایران. رحمان قادرپور برنامه نویس رحمان قادرپور چابکان
+                یکی از معدود هاست هایی هست که باهاش کار کردم و برای سئو و کراولر
+                های گوگل پیکربندی شده و همچنین لوکیشن های مختلف داره و محدود به
+                ایران نیست و علاوه بر اینا آپتایم فوق العاده ای داره و اگر
+                کمپینی رفتید و ترافیک سایتتون خیلی زیاد شد میتونید
+              </div>
+              <h1 className="text-2xl w-full text-center">نفر اول</h1>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="text-white border-1 border-slate-900 p-4">
+            <div className="flex flex-wrap w-full space-y-3 h-full justify-center">
+              <Image
+                className="rounded-md "
+                width={130}
+                height={130}
+                alt="#"
+                src={"/images/12317.jpg"}
+              />
+              <div className="text-center w-full">
+                خوبیه تو ایران. رحمان قادرپور برنامه نویس رحمان قادرپور چابکان
+                یکی از معدود هاست هایی هست که باهاش کار کردم و برای سئو و کراولر
+                های گوگل پیکربندی شده و همچنین لوکیشن های مختلف داره و محدود به
+                ایران نیست و علاوه بر اینا آپتایم فوق العاده ای داره و اگر
+                کمپینی رفتید و ترافیک سایتتون خیلی زیاد شد میتونید
+              </div>
+              <h1 className="text-2xl w-full text-center">نفر دوم</h1>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="text-white border-1 border-slate-900 p-4">
+            <div className="flex flex-wrap w-full space-y-3 h-full justify-center">
+              <Image
+                className="rounded-md "
+                width={130}
+                height={130}
+                alt="#"
+                src={"/images/12317.jpg"}
+              />
+              <div className="text-center w-full">
+                خوبیه تو ایران. رحمان قادرپور برنامه نویس رحمان قادرپور چابکان
+                یکی از معدود هاست هایی هست که باهاش کار کردم و برای سئو و کراولر
+                های گوگل پیکربندی شده و همچنین لوکیشن های مختلف داره و محدود به
+                ایران نیست و علاوه بر اینا آپتایم فوق العاده ای داره و اگر
+                کمپینی رفتید و ترافیک سایتتون خیلی زیاد شد میتونید
+              </div>
+              <h1 className="text-2xl w-full text-center">نفر سوم</h1>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="text-white border-1 border-slate-900 p-4">
+            <div className="flex flex-wrap w-full space-y-3 h-full justify-center">
+              <Image
+                className="rounded-md "
+                width={130}
+                height={130}
+                alt="#"
+                src={"/images/12317.jpg"}
+              />
+              <div className="text-center w-full">
+                خوبیه تو ایران. رحمان قادرپور برنامه نویس رحمان قادرپور چابکان
+                یکی از معدود هاست هایی هست که باهاش کار کردم و برای سئو و کراولر
+                های گوگل پیکربندی شده و همچنین لوکیشن های مختلف داره و محدود به
+                ایران نیست و علاوه بر اینا آپتایم فوق العاده ای داره و اگر
+                کمپینی رفتید و ترافیک سایتتون خیلی زیاد شد میتونید
+              </div>
+              <h1 className="text-2xl w-full text-center">نفر چهارم</h1>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="text-white border-1 border-slate-900 p-4">
+            <div className="flex flex-wrap w-full space-y-3 h-full justify-center">
+              <Image
+                className="rounded-md "
+                width={130}
+                height={130}
+                alt="#"
+                src={"/images/12317.jpg"}
+              />
+              <div className="text-center w-full">
+                خوبیه تو ایران. رحمان قادرپور برنامه نویس رحمان قادرپور چابکان
+                یکی از معدود هاست هایی هست که باهاش کار کردم و برای سئو و کراولر
+                های گوگل پیکربندی شده و همچنین لوکیشن های مختلف داره و محدود به
+                ایران نیست و علاوه بر اینا آپتایم فوق العاده ای داره و اگر
+                کمپینی رفتید و ترافیک سایتتون خیلی زیاد شد میتونید
+              </div>
+              <h1 className="text-2xl w-full text-center">نفر پنجم</h1>
+            </div>
+          </SwiperSlide>
+        </SliderComponents>
+        <RenderImages_GridRow
+          lists={[
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+            "/images/pricing components/rowaIcons_1/arangodb-removebg-preview.png",
+          ]}
+        />
+        <Button
+          className="bg-gradient-to-r transition-all duration-150 
+           hover:bg-gradient-to-l 
+          rounded-lg w-80  p-3 h-20 text-center
+            text-xl text-white font-B_Nazanin"
+        >
+          سرویس مورد نظرتو همین الان بخ
+        </Button>
       </div>
     </div>
   );
